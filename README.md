@@ -6,3 +6,7 @@ Este repositorio contiene:
 - **Recursos y Guías:** Documentos de ayuda como la chuleta de comandos de Git (`chuleta-git.md`).
 - **Perfil y Colaboración:** Información sobre el perfil personal y archivos de práctica de colaboración en Git.
 
+## Tecnologías utilizadas
+
+- HTML5 & CSS3
+- Git & GitHub
