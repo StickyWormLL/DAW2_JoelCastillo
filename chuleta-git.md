@@ -24,8 +24,6 @@ git config --global user.email "tu@email.com"
 
 Guarda tu correo electrónico asociado a los cambios.
 
----
-
 ## 2. Iniciar y Guardar Cambios
 
 * **Carpeta de trabajo:** Donde creas o modificas tus archivos.
@@ -56,8 +54,6 @@ git commit -m "Crea el perfil en Markdown"
 
 Guarda una versión definitiva del proyecto con un mensaje explicativo.
 
----
-
 ## 3. Revisar Estado y Cambios
 
 ```bash
@@ -71,8 +67,6 @@ git diff
 ```
 
 Muestra las diferencias exactas línea por línea que aún no están preparadas.
-
----
 
 ## 4. Deshacer Cambios
 
@@ -88,8 +82,6 @@ git restore perfil.md
 
 Descarta los cambios locales y vuelve el archivo a la última versión guardada.
 
----
-
 ## 5. Eliminar y Mover Archivos
 
 ```bash
@@ -104,8 +96,6 @@ git mv perfil.md nuevo_nombre.md
 
 Renombra o mueve un archivo manteniendo el seguimiento de su historial.
 
----
-
 ## 6. Trabajar con Ramas (`branches`)
 
 ```bash
@@ -119,6 +109,12 @@ git branch rama-nueva
 ```
 
 Crea una nueva rama de trabajo a partir de la actual sin cambiarte a ella.
+
+```bash
+git branch -M main
+```
+
+Cambia el nombre de la rama actual a `main`.
 
 ```bash
 git switch -c rama-nueva
@@ -156,8 +152,6 @@ git branch -D rama-feature
 
 Fuerza la eliminación de una rama aunque contenga cambios no fusionados.
 
----
-
 ## 7. Fusionar Cambios (`merge`)
 
 ```bash
@@ -166,9 +160,27 @@ git merge rama-feature
 
 Incorpora en la rama actual los cambios guardados en la rama indicando su nombre.
 
----
+## 8. Repositorios Remotos (GitHub)
 
-## 8. Ver el Historial
+```bash
+git remote add origin URL_DEL_REPOSITORIO
+```
+
+Conecta tu repositorio local con la dirección del repositorio remoto en GitHub.
+
+```bash
+git remote -v
+```
+
+Muestra la lista de repositorios remotos vinculados y sus direcciones URL.
+
+```bash
+git push -u origin main
+```
+
+Envía los commits locales a la rama `main` remota y establece el enlace de seguimiento.
+
+## 9. Ver el Historial
 
 ```bash
 git log --oneline
