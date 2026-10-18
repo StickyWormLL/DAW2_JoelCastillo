@@ -40,3 +40,28 @@ Mi nombre es **Joel Joan Castillo Ramos**, soy estudiante de DAW de segundo año
 #### Aprendizaje
 
 Utilizo mucho [w3schools.com](http://w3schools.com/) para repasar documentación de forma fácil y rápida.
+
+##### Tecnologías que estoy aprendiendo
+
+| Tecnología | Nivel actual | Recurso para aprender |
+| :--- | :--- | :--- |
+| **React** | Principiante | [Curso de React](https://www.udemy.com/course/react-cero-experto) |
+| **Node.js** | Principiante | [Node.js Docs](https://beta.docs.nodejs.org) |
+| **Python** | Principiante | [Python España](https://es.python.org) |
+
+##### Fragmento de código
+
+```python
+def sayHi(name):
+    return f"Hola, {name}!"
+
+print(sayHi("Joel Joan"))
+```
+
+---
+
+#### Mi cita favorita
+
+> "Another day another world"
+
+En el mundo informático vendría a decir algo como: "No te preocupes si un proyecto no acaba de funcionar, mañana seguramente tendrás otra idea mejor."
