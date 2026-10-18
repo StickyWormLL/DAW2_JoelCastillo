@@ -105,6 +105,12 @@ git branch
 Muestra la lista de ramas creadas y marca con un asterisco en la que estás situado.
 
 ```bash
+git branch -a
+```
+
+Lista tanto las ramas locales como las ramas remotas conocidas.
+
+```bash
 git branch rama-nueva
 ```
 
@@ -121,6 +127,12 @@ git switch -c rama-nueva
 ```
 
 Crea una nueva rama y se cambia a ella en un solo paso.
+
+```bash
+git switch -c feature-desde-v1.0.0 v1.0.0
+```
+
+Crea una nueva rama de trabajo partiendo exactamente del commit marcado con esa etiqueta.
 
 ```bash
 git switch master
@@ -160,13 +172,19 @@ git merge rama-feature
 
 Incorpora en la rama actual los cambios guardados en la rama indicando su nombre.
 
-## 8. Repositorios Remotos (GitHub)
+## 8. Repositorios Remotos y GitHub
+
+```bash
+git clone https://github.com/usuario/nombre-repositorio.git
+```
+
+Descarga un repositorio completo desde GitHub y crea una carpeta local con su contenido.
 
 ```bash
 git remote add origin URL_DEL_REPOSITORIO
 ```
 
-Conecta tu repositorio local con la dirección del repositorio remoto en GitHub.
+Conecta tu repositorio local existente con la dirección remota en GitHub.
 
 ```bash
 git remote -v
@@ -178,9 +196,59 @@ Muestra la lista de repositorios remotos vinculados y sus direcciones URL.
 git push -u origin main
 ```
 
-Envía los commits locales a la rama `main` remota y establece el enlace de seguimiento.
+Publica los commits locales en la rama remota y establece el enlace de seguimiento inicial.
 
-## 9. Ver el Historial
+```bash
+git push -u origin feature/mejora-readme
+```
+
+Publica una nueva rama local en GitHub y la enlaza con el remoto.
+
+```bash
+git pull origin main
+```
+
+Descarga los nuevos commits de la rama remota y los integra en tu rama local actual.
+
+```bash
+git fetch origin
+```
+
+Descarga la información y cambios nuevos del remoto sin modificar tus archivos locales.
+
+```bash
+git fetch --tags origin
+```
+
+Descarga todas las etiquetas del repositorio remoto que aún no tengas en local.
+
+## 9. Etiquetas y Versiones (`tags`)
+
+```bash
+git tag
+```
+
+Lista todas las etiquetas creadas en el repositorio local.
+
+```bash
+git tag -a v1.0.0 -m "Primera versión estable"
+```
+
+Crea una etiqueta anotada en el commit actual con un mensaje identificativo.
+
+```bash
+git push origin v1.0.0
+```
+
+Publica la etiqueta indicada en el repositorio remoto de GitHub.
+
+```bash
+git show v1.0.0
+```
+
+Muestra los detalles del commit y el mensaje asociado a esa etiqueta.
+
+## 10. Ver el Historial
 
 ```bash
 git log --oneline
@@ -199,6 +267,18 @@ git log --oneline --graph --all
 ```
 
 Muestra un gráfico visual sencillo del historial con todas las ramas y fusiones.
+
+```bash
+git log --oneline --decorate -5
+```
+
+Muestra los últimos 5 commits e indica qué ramas y referencias remotas apuntan a ellos.
+
+```bash
+git log HEAD..origin/main
+```
+
+Muestra los commits que ya están publicados en GitHub pero que aún no tienes en local.
 
 ```bash
 git log rama1 rama2 archivo.md
