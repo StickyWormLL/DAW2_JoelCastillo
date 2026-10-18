@@ -65,3 +65,16 @@ print(sayHi("Joel Joan"))
 > "Another day another world"
 
 En el mundo informático vendría a decir algo como: "No te preocupes si un proyecto no acaba de funcionar, mañana seguramente tendrás otra idea mejor."
+
+---
+
+#### Objetivos personales
+
+**Objetivo para este curso**: Finalizar 2nd de DAW y ganar el iFest
+
+##### Checklist de objetivos
+
+- [x] ~~Configurar el entorno de desarrollo~~
+- [x] Crear el perfil en Markdown
+- [ ] Entregarlo en el Moodle a tiempo
+- [ ] Relajarse y ver una película
