@@ -1,9 +1,9 @@
 # Guía Básica de Git
 
-## Instalar y Configurar
+## 1. Instalar y Configurar
 
 * **Windows:** Descarga desde [git-scm.com](https://git-scm.com).
-* **macOS:** Ejecuta `git --version` en la terminal e instala las herramientas si te las pide.
+* **macOS:** Ejecuta `git --version` en la terminal e instala las herramientas si las pide.
 * **Ubuntu/Debian:** Instala ejecutando `sudo apt install git`.
 
 ```bash
@@ -26,7 +26,7 @@ Guarda tu correo electrónico asociado a los cambios.
 
 ---
 
-## Iniciar y Guardar Cambios
+## 2. Iniciar y Guardar Cambios
 
 * **Carpeta de trabajo:** Donde creas o modificas tus archivos.
 * **Staging:** El área donde preparas los archivos antes de guardarlos.
@@ -45,12 +45,6 @@ git init
 Inicializa Git dentro de la carpeta actual.
 
 ```bash
-git status
-```
-
-Muestra qué archivos se han creado, modificado o preparado.
-
-```bash
 git add perfil.md
 ```
 
@@ -64,19 +58,64 @@ Guarda una versión definitiva del proyecto con un mensaje descriptivo.
 
 ---
 
-## Ver Cambios e Historial
+## 3. Revisar Estado y Cambios (`status` / `diff`)
+
+```bash
+git status
+```
+
+Te dice en qué punto está tu trabajo y qué archivos han cambiado.
 
 ```bash
 git diff
 ```
 
-Enseña las líneas concretas que has cambiado pero aún no has preparado.
+Te muestra línea por línea exactas las modificaciones que aún no has preparado para guardar.
+
+---
+
+## 4. Deshacer Cambios (`restore`)
+
+```bash
+git restore --staged perfil.md
+```
+
+Saca el archivo del área de preparación sin borrar el trabajo que hiciste en él.
+
+```bash
+git restore perfil.md
+```
+
+Descarta los cambios no guardados y vuelve el archivo a la última versión registrada.
+
+---
+
+## 5. Eliminar y Mover Archivos (`rm` / `mv`)
+
+```bash
+git rm perfil.md
+```
+
+Elimina el archivo del disco y avisa a Git para que prepare su borrado.
+
+```bash
+git mv perfil.md nuevo_nombre.md
+```
+
+Cambia el nombre o la ubicación del archivo guardando el rastro del cambio.
+
+---
+
+## 6. Historial
 
 ```bash
 git log --oneline
 ```
 
-Muestra la lista de versiones guardadas en una sola línea por cada una.
+Muestra la lista de versiones guardadas de forma resumida en una sola línea por cada una.
 
 ```bash
 git show
+```
+
+Detalla exactamente qué cambió en el último guardado realizado.
